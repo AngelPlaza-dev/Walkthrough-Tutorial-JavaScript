@@ -1,14 +1,12 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], (Controller) => {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast"
+ ], (Controller, MessageToast) => {
 	"use strict";
-
+ 
 	return Controller.extend("ui5.walkthrough.controller.App", {
-		onShowHello() {
-			// show a native JavaScript alert
-			/* eslint-disable no-alert */
-			alert("Hello World");
-			/* eslint-enable no-alert */
-		}
+	   onShowHello() {
+		  MessageToast.show("Hello World");
+	   }
 	});
-});
+ });	
