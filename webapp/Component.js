@@ -2,7 +2,7 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/Device"
-], (UIComponent, JSONModel,Device) => {
+], (UIComponent, JSONModel, Device) => {
 	"use strict";
 
 	return UIComponent.extend("ui5.walkthrough.Component", {
@@ -31,6 +31,10 @@ sap.ui.define([
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
+		},
+
+		getContentDensityClass() {
+			return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
 		}
 	});
 });
