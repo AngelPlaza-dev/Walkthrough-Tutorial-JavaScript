@@ -1,5 +1,5 @@
-
 # Walkthrough-Tutorial-JavaScript
+
 ## UI5 Demo Kit
 
 ### Setup
@@ -36,9 +36,24 @@
    npm start
    ```
 
+   ```bash
+    npm run build
+   ```
+
+   ```bash
+   npm i -D local-web-server
+   ```
+
+   ```bash
+   npm run serve-dist
+   ```
+
 ### Notas
 
 - Cada vez que realices cambios en el proyecto, simplemente cierra la terminal y vuelve a ejecutar `npm start` para ver los cambios reflejados.
 
 Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en consultar la [documentación de UI5](https://openui5.org/).
+
+```
+
 ```
