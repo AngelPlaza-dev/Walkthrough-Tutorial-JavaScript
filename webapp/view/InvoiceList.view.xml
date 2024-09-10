@@ -1,7 +1,8 @@
 <mvc:View
 	controllerName="ui5.walkthrough.controller.InvoiceList"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+>
 	<Table
 		id="invoiceList"
 		class="sapUiResponsiveMargin"
@@ -12,14 +13,16 @@
 					path : 'ShipperName',
 					group : true
 				}
-			}">
+			}"
+	>
 		<headerToolbar>
 			<Toolbar>
 				<Title text="{i18n>invoiceListTitle}" />
 				<ToolbarSpacer />
 				<SearchField
 					width="50%"
-					search=".onFilterInvoices"/>
+					search=".onFilterInvoices"
+				/>
 			</Toolbar>
 		</headerToolbar>
 		<columns>
@@ -27,7 +30,8 @@
 				hAlign="End"
 				minScreenWidth="Small"
 				demandPopin="true"
-				width="5em">
+				width="5em"
+			>
 				<Text text="{i18n>columnQuantity}" />
 			</Column>
 			<Column>
@@ -35,12 +39,14 @@
 			</Column>
 			<Column
 				minScreenWidth="Small"
-				demandPopin="true">
+				demandPopin="true"
+			>
 				<Text text="{i18n>columnStatus}" />
 			</Column>
 			<Column
 				minScreenWidth="Tablet"
-				demandPopin="false">
+				demandPopin="false"
+			>
 				<Text text="{i18n>columnSupplier}" />
 			</Column>
 			<Column hAlign="End">
@@ -50,11 +56,13 @@
 		<items>
 			<ColumnListItem
 				type="Navigation"
-				press=".onPress">
+				press=".onPress"
+			>
 				<cells>
 					<ObjectNumber
 						number="{invoice>Quantity}"
-						emphasized="false"/>
+						emphasized="false"
+					/>
 					<ObjectIdentifier title="{invoice>ProductName}" />
 					<Text
 						text="{
@@ -65,7 +73,8 @@
 									'i18n>invoiceStatusC'
 								],
 								formatter: '.formatter.statusText'
-							}"/>
+							}"
+					/>
 					<Text text="{invoice>ShipperName}" />
 					<ObjectNumber
 						number="{
@@ -79,7 +88,8 @@
 								}
 							}"
 						unit="{view>/currency}"
-						state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
+						state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
+					/>
 				</cells>
 			</ColumnListItem>
 		</items>
